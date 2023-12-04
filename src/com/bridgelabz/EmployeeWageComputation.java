@@ -5,6 +5,7 @@ public class EmployeeWageComputation {
         System.out.println("Welcome to Employee Wage Computation");
         EmployeeWageComputation e1 = new EmployeeWageComputation();
         e1.UC_1_EmployeeAttendanceUC();
+        e1.UC_2_CalculateDailyWageUC();
     }
     public void UC_1_EmployeeAttendanceUC(){
         Random random = new Random();
@@ -17,7 +18,12 @@ public class EmployeeWageComputation {
         else {
             // Otherwise, the employee is absent
             System.out.println("The employee is absent.");
-
         }
+    }
+    public void UC_2_CalculateDailyWageUC(){
+        int wagePerHour = 20;
+        int fullDayHours = 8;
+        int dailyWage = wagePerHour * fullDayHours;
+        System.out.println("Daily Employee Wage: Rs." + dailyWage);
     }
 }
