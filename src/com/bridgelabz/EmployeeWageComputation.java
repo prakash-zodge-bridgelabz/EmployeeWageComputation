@@ -9,6 +9,7 @@ public class EmployeeWageComputation {
         e1.UC_2_CalculateDailyWageUC();
         e1.UC_3_CalculatePartTimeAndFullTimeWageUC();
         e1.UC_4_EmployeeWageSwitchUC();
+        e1.UC_5_MonthlyWageCalculatorUC();
     }
     public void UC_1_EmployeeAttendanceUC(){
         Random random = new Random();
@@ -60,5 +61,13 @@ public class EmployeeWageComputation {
             default:
                 System.out.println("Invalid employee type entered.");
         }
+    }
+    public void UC_5_MonthlyWageCalculatorUC(){
+        int wagePerHour = 20;
+        int fullDayHours = 8;
+        int workingDaysInMonth = 20;
+        int dailyWage = wagePerHour * fullDayHours;
+        int monthlyWage = dailyWage * workingDaysInMonth;
+        System.out.println("Monthly Employee Wage: Rs." + monthlyWage);
     }
 }
