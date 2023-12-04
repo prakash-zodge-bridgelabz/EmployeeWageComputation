@@ -10,6 +10,7 @@ public class EmployeeWageComputation {
         e1.UC_3_CalculatePartTimeAndFullTimeWageUC();
         e1.UC_4_EmployeeWageSwitchUC();
         e1.UC_5_MonthlyWageCalculatorUC();
+        e1.UC_6_CalculateWagesTillConditionUC();
     }
     public void UC_1_EmployeeAttendanceUC(){
         Random random = new Random();
@@ -69,5 +70,22 @@ public class EmployeeWageComputation {
         int dailyWage = wagePerHour * fullDayHours;
         int monthlyWage = dailyWage * workingDaysInMonth;
         System.out.println("Monthly Employee Wage: Rs." + monthlyWage);
+    }
+    public void UC_6_CalculateWagesTillConditionUC(){
+        double workingDaysInMonth = 20;
+        double totalHours = 100;
+        double hourlyWage = 20;
+        String name = "Prakash Zodge";
+        System.out.println("Employee Name: " + name);
+        System.out.println("Hourly Wage: " + hourlyWage);
+        double hoursPerDay = totalHours / workingDaysInMonth;
+        System.out.println("Hours per day : "+hoursPerDay);
+        // Calculate salary until 20 working days
+        double salaryPerDay = hourlyWage * hoursPerDay;
+        double salary = 0;
+        for(int day=1;day<=workingDaysInMonth;day++) {
+            salary += salaryPerDay;
+            System.out.println("Day : "+day+", earned salary : "+salary);
+        }
     }
 }
